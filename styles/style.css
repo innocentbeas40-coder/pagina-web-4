@@ -1,3 +1,6 @@
+/* ===========================
+   VARIABLES GLOBALES
+=========================== */
 :root {
     --blanco: #F6F7F6;
     --blanco-secundario: #F3F3F3;
@@ -7,10 +10,12 @@
     --verde: #BCFC61;
 }
 
-.html {
+/* ===========================
+   CONFIGURACIÓN GENERAL
+=========================== */
+html {
     font-size: 62.5%;
     box-sizing: border-box;
-
 }
 
 *,
@@ -20,29 +25,22 @@
 }
 
 body {
-
     font-size: 16px;
     font-family: "Krub", sans-serif;
-
-
-
-
 }
 
-
-
-
+/* ===========================
+   HEADER Y NAVEGACIÓN
+=========================== */
 .header {
     width: 90%;
     display: flex;
     justify-content: space-between;
-
 }
 
 .logo {
     display: flex;
     align-items: center;
-
 }
 
 .navegacion {
@@ -56,6 +54,9 @@ body {
     color: var(--negro);
 }
 
+/* ===========================
+   RESPONSIVE - TABLETS Y MÓVILES
+=========================== */
 @media (max-width: 1024px) {
 
     .header {
@@ -70,7 +71,6 @@ body {
     }
 
     .boton:hover {
-
         text-align: center;
         border-radius: 0%;
         background-color: var(--gris);
@@ -84,12 +84,13 @@ body {
     }
 }
 
+/* ===========================
+   BOTONES
+=========================== */
 .boton {
     padding: 0.8rem 1.5rem;
     border-radius: .5rem;
 }
-
-
 
 .navegacion .boton:last-child {
     border: 2px solid var(--negro);
@@ -99,9 +100,9 @@ body {
     background-color: var(--gris);
 }
 
-
-
-
+/* ===========================
+   SECCIÓN HERO
+=========================== */
 .tituloprincipal {
     display: flex;
     align-items: center;
@@ -112,13 +113,11 @@ body {
     margin-top: 1rem;
     margin-left: 15rem;
     width: 400px;
-
 }
 
 .tituloprincipal h2 {
     font-size: 2.5rem;
     width: 19rem;
-
 }
 
 .tituloprincipal p {
@@ -130,21 +129,24 @@ body {
     color: var(--blanco);
     text-decoration: none;
     background-color: var(--negro);
-
 }
 
+/* ===========================
+   SECCIÓN DE ICONOS
+=========================== */
 .iconos {
     margin-top: 4rem;
-
 }
 
 .icono {
     width: 280px;
 }
 
+/* ===========================
+   TÍTULO DE SERVICIOS
+=========================== */
 .tituloservicios {
     display: flex;
-
 }
 
 .tituloservicios h2 {
@@ -162,19 +164,46 @@ body {
     font-size: small;
 }
 
+/* ===========================
+   TARJETAS DE SERVICIOS
+=========================== */
 .mis_servicios {
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(2, 2fr);
-
 }
 
 .flecha-mas {
     display: flex;
+    align-items: center;
+}
 
+.contenedor_blanco svg {
+    background-color: var(--negro);
+    color: var(--verde);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.mis_servicios a {
+    text-decoration: none;
+}
+
+.mas_blanco {
+    color: var(--negro);
+}
+
+.mas_negro {
+    color: var(--blanco);
+}
+
+.contenedor_negro svg {
+    background-color: var(--blanco);
+    color: var(--negro);
+    border-radius: 50%;
+    margin-right: 1rem;
 }
 
 .contenedor_negro {
     background-color: var(--negro);
-
 }
