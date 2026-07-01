@@ -25,8 +25,10 @@ html {
 }
 
 body {
+
     font-size: 16px;
-    font-family: "Krub", sans-serif;
+    font-family: "Google Sans Flex", sans-serif;
+    margin-left: 4rem;
 }
 
 /* ===========================
@@ -36,6 +38,11 @@ body {
     width: 90%;
     display: flex;
     justify-content: space-between;
+}
+
+.header span {
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 .logo {
@@ -93,7 +100,9 @@ body {
 }
 
 .navegacion .boton:last-child {
+    padding: 1.5rem 2.5rem;
     border: 2px solid var(--negro);
+    border-radius: 1rem;
 }
 
 .boton:hover {
@@ -116,12 +125,14 @@ body {
 }
 
 .tituloprincipal h2 {
-    font-size: 2.5rem;
-    width: 19rem;
+    font-size: 4rem;
+    width: 35rem;
 }
 
 .tituloprincipal p {
-    width: 19rem;
+    font-size: 1.5rem;
+    color: var(--gris);
+    width: 29rem;
     margin-bottom: 3rem;
 }
 
@@ -129,17 +140,21 @@ body {
     color: var(--blanco);
     text-decoration: none;
     background-color: var(--negro);
+    padding: 1.3rem 3rem;
+    border-radius: 1rem;
+
 }
 
 /* ===========================
    SECCIÓN DE ICONOS
 =========================== */
 .iconos {
-    margin-top: 4rem;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
 }
 
 .icono {
-    width: 280px;
+    width: 260px;
 }
 
 /* ===========================
@@ -168,21 +183,51 @@ body {
    TARJETAS DE SERVICIOS
 =========================== */
 .mis_servicios {
+
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(2, 2fr);
 }
+
 
 .flecha-mas {
     display: flex;
     align-items: center;
 }
 
+
+
 .contenedor_blanco svg {
     background-color: var(--negro);
     color: var(--verde);
     border-radius: 50%;
     margin-right: 1rem;
+}
+
+.contenedor_blanco h3 span {
+
+    background-color: var(--verde);
+    padding: 0 .4rem;
+    border-radius: .5rem;
+}
+
+.contenedor_negro h3 span {
+    background-color: var(--blanco);
+    padding: 0 .4rem;
+    border-radius: .5rem;
+
+}
+
+h3 span {
+    display: block;
+}
+
+
+
+h3 span:last-child {
+    display: block;
+    margin-top: .07px;
+
 }
 
 .mis_servicios a {
