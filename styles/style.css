@@ -5,6 +5,7 @@
     --blanco: #F6F7F6;
     --blanco-secundario: #F3F3F3;
     --gris: #383838;
+    --gris-claro: #F3F3F3;
     --negro: #202020;
     --negro-secundario: #1E1E1E;
     --verde: #BCFC61;
@@ -28,16 +29,18 @@ body {
 
     font-size: 16px;
     font-family: "Google Sans Flex", sans-serif;
-    margin-left: 4rem;
+    
 }
 
 /* ===========================
    HEADER Y NAVEGACIÓN
 =========================== */
 .header {
-    width: 90%;
+    
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
 }
 
 .header span {
@@ -52,51 +55,29 @@ body {
 
 .navegacion {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+width: 100%;
     gap: 2rem;
 }
 
 .navegacion a {
+
     text-decoration: none;
     color: var(--negro);
 }
 
-/* ===========================
-   RESPONSIVE - TABLETS Y MÓVILES
-=========================== */
-@media (max-width: 1024px) {
 
-    .header {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
 
-    .navegacion {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .boton:hover {
-        text-align: center;
-        border-radius: 0%;
-        background-color: var(--gris);
-        width: 100%;
-    }
-
-    .navegacion .boton:last-child {
-        border-radius: .5rem;
-        width: auto;
-        border: 2px solid var(--negro);
-    }
-}
 
 /* ===========================
    BOTONES
 =========================== */
 .boton {
+    width: 100%;
+    text-align: center;
     padding: 0.8rem 1.5rem;
     border-radius: .5rem;
+    box-sizing: border-box;
 }
 
 .navegacion .boton:last-child {
@@ -106,6 +87,7 @@ body {
 }
 
 .boton:hover {
+
     background-color: var(--gris);
 }
 
@@ -113,14 +95,18 @@ body {
    SECCIÓN HERO
 =========================== */
 .tituloprincipal {
+    width: 60%;
+}
+
+.contenedor_titulo {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    width: 16rem;
+    gap: 20rem;
 }
 
 .hero img {
-    margin-top: 1rem;
-    margin-left: 15rem;
+
     width: 400px;
 }
 
@@ -187,15 +173,48 @@ body {
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(2, 2fr);
+    margin-bottom: 10rem;
 }
 
 
 .flecha-mas {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20rem;
+
+
 }
 
+.flecha {
+    display: flex;
+    align-items: center;
 
+
+}
+
+.contenedor_negro {
+    border-radius: 3rem;
+    background-color: var(--negro);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contenedor_blanco {
+    border-radius: 3rem;
+    border: solid 2px var(--negro);
+    border-bottom: solid 9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-bottom: 2rem;
+}
 
 .contenedor_blanco svg {
     background-color: var(--negro);
@@ -204,19 +223,43 @@ body {
     margin-right: 1rem;
 }
 
-.contenedor_blanco h3 span {
+/* .contenedor_blanco h3 span {
 
     background-color: var(--verde);
     padding: 0 .4rem;
     border-radius: .5rem;
+
+} */
+
+.contenedor_blanco h3 {
+    /* justify-content: ; */
+    display: inline;
+    background-color: var(--verde);
+    width: max-content;
+    padding: 1rem;
+    margin-bottom: .5rem;
+    border-radius: .5rem;
+}
+
+.contenedor_blanco h3 span {
+    margin-top: .5rem;
+}
+
+.contenedor_negro h3 {
+
+    display: inline;
+    background-color: var(--blanco);
+    width: max-content;
+    padding: 1rem;
+    margin-bottom: .5rem;
+    border-radius: .5rem;
 }
 
 .contenedor_negro h3 span {
-    background-color: var(--blanco);
-    padding: 0 .4rem;
-    border-radius: .5rem;
-
+    margin-top: .5rem;
 }
+
+
 
 h3 span {
     display: block;
@@ -249,6 +292,139 @@ h3 span:last-child {
     margin-right: 1rem;
 }
 
-.contenedor_negro {
+
+
+.imagen {
+
+    width: 200px;
+}
+
+/* marketing */
+
+.contenedor_textoestudio {
+    display: flex;
+}
+
+.contenedor_textoestudio h2 {
+    margin-right: 2rem;
+    background-color: var(--verde);
+    padding: .3rem .3rem;
+    border-radius: .4rem;
+}
+
+.contenedor_textoestudio p {
+    display: flex;
+    align-items: center;
+    width: 40rem;
+    font-size: small;
+}
+
+.contenedor_marketing {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.marketing {
+    background-color: var(--gris-claro);
+    padding: 3rem;
+    border-radius: 3rem;
+}
+
+.marketing h3 {
+    font-size: 2rem;
+}
+
+.marketing p {
+    font-size: 1.5rem;
+    width: 36rem;
+    margin-bottom: 4rem;
+}
+
+.marketing a {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-decoration: none;
     background-color: var(--negro);
+    color: var(--blanco);
+}
+
+
+
+.imagen_marketing img {
+
+    width: 200px;
+}
+
+.contenedor_casosestudio {
+    display: flex;
+    background-color: var(--negro);
+    border-radius: 3rem;
+    padding: 4rem;
+    gap: 6rem;
+}
+
+.contenedor_casosestudio p {
+    width: 30rem;
+    color: var(--blanco);
+}
+
+.contenedor_casosestudio a {
+    color: var(--verde);
+    text-decoration: none;
+}
+
+
+.flecha_estudio {
+
+    color: var(--verde);
+    display: flex;
+
+}
+
+
+
+footer {
+    margin-top: 4rem;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+/* 
+responsividad  */
+
+@media (min-width: 1024px) {
+
+    body{
+        margin-left: 4rem;
+    }
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        align-items: center;
+    }
+
+    .navegacion {
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        flex-direction: row;
+    }
+
+    .boton {
+        width: auto;
+    }
+
+
+
+
+
+
 }
