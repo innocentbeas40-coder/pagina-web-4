@@ -29,18 +29,19 @@ body {
 
     font-size: 16px;
     font-family: "Google Sans Flex", sans-serif;
-    
+
 }
 
 /* ===========================
    HEADER Y NAVEGACIÓN
 =========================== */
 .header {
-    
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
 }
 
 .header span {
@@ -51,12 +52,13 @@ body {
 .logo {
     display: flex;
     align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 .navegacion {
     display: flex;
     flex-direction: column;
-width: 100%;
+    width: 100%;
     gap: 2rem;
 }
 
@@ -94,32 +96,34 @@ width: 100%;
 /* ===========================
    SECCIÓN HERO
 =========================== */
-.tituloprincipal {
-    width: 60%;
+
+
+
+
+
+.hero {
+    display: flex;
+    justify-content: center;
 }
 
-.contenedor_titulo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20rem;
-}
 
 .hero img {
-
+    margin-top: 4rem;
     width: 400px;
 }
 
 .tituloprincipal h2 {
     font-size: 4rem;
-    width: 35rem;
+    /* width: 35rem; */
+
 }
 
 .tituloprincipal p {
     font-size: 1.5rem;
     color: var(--gris);
-    width: 29rem;
+    /* width: 29rem; */
     margin-bottom: 3rem;
+
 }
 
 .tituloprincipal a {
@@ -129,7 +133,19 @@ width: 100%;
     padding: 1.3rem 3rem;
     border-radius: 1rem;
 
+
+
 }
+
+.contenedor_navigating {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
 
 /* ===========================
    SECCIÓN DE ICONOS
@@ -137,43 +153,56 @@ width: 100%;
 .iconos {
     margin-top: 5rem;
     margin-bottom: 2rem;
+
 }
 
-.icono {
-    width: 260px;
+.contenedor_iconos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+
 }
 
 /* ===========================
    TÍTULO DE SERVICIOS
 =========================== */
 .tituloservicios {
-    display: flex;
+    display: inline;
+
+
 }
 
 .tituloservicios h2 {
+
     margin-right: 2rem;
     background-color: var(--verde);
     padding: .3rem .3rem;
     border-radius: .4rem;
+    
+
 }
 
 .tituloservicios p {
     color: var(--gris);
-    display: flex;
-    align-items: center;
-    width: 500px;
+
     font-size: small;
 }
 
 /* ===========================
    TARJETAS DE SERVICIOS
 =========================== */
-.mis_servicios {
 
-    display: grid;
-    gap: 3rem;
-    grid-template-columns: repeat(2, 2fr);
-    margin-bottom: 10rem;
+.tituloservicios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mis_servicios {
+    display: inline;
+    flex-direction: column;
+    margin-top: 4rem;
 }
 
 
@@ -296,7 +325,7 @@ h3 span:last-child {
 
 .imagen {
 
-    width: 200px;
+    width: 170px;
 }
 
 /* marketing */
@@ -398,9 +427,10 @@ responsividad  */
 
 @media (min-width: 1024px) {
 
-    body{
+    body {
         margin-left: 4rem;
     }
+
     .header {
         flex-direction: row;
         justify-content: space-between;
@@ -423,8 +453,75 @@ responsividad  */
     }
 
 
+}
 
 
+@media (min-width: 1024px) {
+    .contenedor_titulo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20rem;
 
+    }
+
+    .tituloprincipal {
+        width: 60%;
+    }
+
+    .tituloprincipal h2 {
+        width: 35rem;
+    }
+
+    .tituloprincipal p {
+        width: 29rem;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+    .icono {
+        width: 300px;
+    }
+
+    .contenedor_iconos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .tituloservicios {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+
+
+    }
+
+    .tituloservicios p {
+
+        display: flex;
+        align-items: center;
+        width: 500px;
+
+
+    }
+
+    .mis_servicios {
+
+        display: grid;
+        gap: 3rem;
+        grid-template-columns: repeat(2, 2fr);
+        margin-bottom: 10rem;
+    }
+
+    .tituloservicios h2 {
+
+       
+
+    }
 
 }
