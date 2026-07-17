@@ -333,7 +333,9 @@ h3 span:last-child {
     width: 170px;
 }
 
-/* marketing */
+/* ===========================
+   MARKETING
+=========================== */
 
 
 
@@ -385,7 +387,9 @@ h3 span:last-child {
 
 }
 
-/* casos de estudio */
+/* ===========================
+   CASOS DE ESTUDIO
+=========================== */
 
 .contenedor_textoestudio {
     display: flex;
@@ -447,7 +451,9 @@ h3 span:last-child {
 
 }
 
-
+/* ===========================
+  FOOTER
+=========================== */
 
 footer {
     margin-top: 4rem;
@@ -457,8 +463,9 @@ footer {
 }
 
 
-/* 
-responsividad  */
+/* ===========================
+   RESPONSIVIDAD
+=========================== */
 
 @media (min-width: 1024px) {
 
